@@ -15,12 +15,12 @@ function App() {
       corSecundaria: "#D9F7E9"
     },
     {
-      nome: "TIme Cs",
+      nome: "Time Cs",
       corPrimaria: "#82CFFA",
       corSecundaria: "#E8F8FF"
     },
     {
-      nome: "Amigos",
+      nome: "Time Valorante",
       corPrimaria: "#A6D157",
       corSecundaria: "#F0F8E2"
     }
