@@ -1,0 +1,16 @@
+.header-img{
+    position: relative;
+}
+.header-img h1{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 5em;
+    color: white;
+    background-color: rgba(62, 58, 53, 0.463);
+}
+
+.header-img img{
+    height: 75vh;
+    width: 100%;
+}

@@ -1,53 +1,60 @@
 
-import { useState } from "react";
-import Banner from "./componentes/Banner/Banner.js";
-import Times from "./componentes/Times/Index.js";
-import Formularior from "./componentes/formulario/Index.js";
-import Rodape from "./componentes/rodape/Index.js";
-
+import { useState } from 'react';
+import './App.css';
+import Form from './components/formulario';
+import ImgHeader from './components/imgHeader';
+import Times from './times';
 
 function App() {
-  const [componentes, setComponentes] = useState([])
-  const grupos = [
+  const [player, setPlayer] = useState([])
+
+  const times = [
     {
-      nome: "Familia",
-      corPrimaria: "#57c278",
-      corSecundaria: "#D9F7E9"
+      funcao: "Iniciador",
+      corPrimaria: "#00000"
     },
     {
-      nome: "Time Cs",
-      corPrimaria: "#82CFFA",
-      corSecundaria: "#E8F8FF"
+      funcao: "Duelista",
+      corPrimaria: "#00000"
     },
     {
-      nome: "Time Valorante",
-      corPrimaria: "#A6D157",
-      corSecundaria: "#F0F8E2"
-    }
+      funcao: "Controlador",
+      corPrimaria: "#00000"
+    },
+    {
+      funcao: "Sentinela",
+      corPrimaria: "#00000"
+    },
   ]
- const receberComponetes = (componente)=>{
-  setComponentes([...componentes, componente]);
-  
+  const funcoes = [
+    "Iniciador",
+    "Duelista",
+    "Constrolador",
+    "Sentinela"
+  ]
+const receberPlayer = (elemento)=>{
+  setPlayer([...player ,elemento])
+  console.log(elemento)
 }
+
+
+
   return (
-    <div className="App">
-      <Banner />
-      <Formularior
-        aosubmitformulario = { (compomente) => receberComponetes(compomente)}
-        grupos={grupos.map(grupo => grupo.nome)}
-
-      />
-
-      {grupos.map((time) => <Times
-        key={time.nome}
-        nome={time.nome}
-        corP={time.corPrimaria}
-        corS={time.corSecundaria}
-        times={componentes.filter((componente)=> componente.grupo === time.nome)}
-      />)}
-
-      <Rodape/>
-    </div>
+    <section>
+      <ImgHeader />
+      <Form
+        funcoes={funcoes}
+        receberPlayer={ (elemento) => receberPlayer(elemento)}
+         />
+      {times.map(time=>{
+        return <Times
+        key={time.funcao}
+        timeCorP = {time.corPrimaria}
+        timeNome = {time.funcao}
+        time = {player.filter((p)=> p.funcaoPlayer === time.funcao)}
+        />
+      })}
+    </section>
   );
 }
 
