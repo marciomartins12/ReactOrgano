@@ -1,7 +1,29 @@
-.container-item{
+.container-item {
     width: 150px;
     height: auto;
+    margin: 0.25em;
+
 }
-.container-item img{
+
+.container-item img {
     width: 80px;
+    border-radius: 50%;
+    bottom: -8px;
+    position: relative;
+}
+
+.div-nome-paragrafo h3 {
+    position: relative;
+    
+    margin-top: 1em;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.div-img {
+    border-radius: 1em 1em 0 0;
+    height: 50px;
+    background-color: aqua;
+
 }

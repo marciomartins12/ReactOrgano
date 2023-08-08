@@ -1,13 +1,13 @@
-import { Fragment } from "react"
 import "./Times.css"
 import Item from "./itemTime"
 const Times = (props) => {
-    console.log("aqui", props.time)
     return (
 (props.time.length > 0) &&
         <section className="container">
+<div className="h2">
 
             <h2>{props.timeNome}</h2>
+</div>
             <div className="container-div">
 
                 {props.time.map((time) => {

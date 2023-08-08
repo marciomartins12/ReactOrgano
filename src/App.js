@@ -29,13 +29,13 @@ function App() {
   const funcoes = [
     "Iniciador",
     "Duelista",
-    "Constrolador",
+    "Controlador",
     "Sentinela"
   ]
-const receberPlayer = (elemento)=>{
-  setPlayer([...player ,elemento])
-  console.log(elemento)
-}
+  const receberPlayer = (elemento) => {
+    setPlayer([...player, elemento])
+    console.log(elemento)
+  }
 
 
 
@@ -44,14 +44,14 @@ const receberPlayer = (elemento)=>{
       <ImgHeader />
       <Form
         funcoes={funcoes}
-        receberPlayer={ (elemento) => receberPlayer(elemento)}
-         />
-      {times.map(time=>{
+        receberPlayer={(elemento) => receberPlayer(elemento)}
+      />
+      {times.map(time => {
         return <Times
-        key={time.funcao}
-        timeCorP = {time.corPrimaria}
-        timeNome = {time.funcao}
-        time = {player.filter((p)=> p.funcaoPlayer === time.funcao)}
+          key={time.funcao}
+          timeCorP={time.corPrimaria}
+          timeNome={time.funcao}
+          time={player.filter((p) => p.funcaoPlayer === time.funcao)}
         />
       })}
     </section>
