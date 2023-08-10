@@ -6,29 +6,29 @@ import Times from './components/times';
 function App() {
   const [player, setPlayer] = useState([])
 
-  const times = [
+  const [times, setTimes ]= useState( [
     {
       funcao: "Iniciador",
-      corPrimaria: "#c18ad1",
-      corSecundaria: "#e0bce8"
+      cor: "#c18ad1",
+      
     },
     {
       funcao: "Duelista",
-      corPrimaria: "#0061ad",
-      corSecundaria: "#56d0e9"
+      cor: "#0061ad",
+      
     },
     {
       funcao: "Controlador",
-      corPrimaria: "#9b2d65",
-      corSecundaria: "#c48e94"
+      cor: "#9b2d65",
+      
     },
     {
       funcao: "Sentinela",
-      corPrimaria: "#09f6b6",
-      corSecundaria: "#a9ffff"
+      cor: "#09f6b6",
+      
      
     },
-  ]
+  ])
   const funcoes = [
     "Iniciador",
     "Duelista",
@@ -39,7 +39,13 @@ function App() {
     setPlayer([...player, elemento])
     console.log(elemento)
   }
-
+function mudarCor(cor, nome){
+  setTimes(times.map((time)=>{
+    if(time.funcao == nome){
+      time.cor = cor
+    }
+  return time}) )
+}
 
 
   return (
@@ -52,9 +58,9 @@ function App() {
       {times.map(time => {
         return <Times
           key={time.funcao}
-          timeCorP={time.corPrimaria}
-          timeCorS={time.corSecundaria}
+          timeCorP={time.cor}
           timeNome={time.funcao}
+          mudarCor ={mudarCor}
           time={player.filter((p) => p.funcaoPlayer === time.funcao)}
         />
       })}

@@ -6,9 +6,12 @@ const Times = (props) => {
         <section className="container" style={{backgroundImage:"url(./img/fundo.png)",
         backgroundColor:props.timeCorS}}>
 <div className="h2">
-
             <h2 style={{backgroundColor:props.timeCorP, padding:10}}>{props.timeNome}</h2>
 </div>
+            <input className="inp" type="color"
+            value={props.timeCorP}
+            onChange={(evento)=> props.mudarCor(evento.target.value, props.timeNome)}
+            />
             <div className="container-div">
 
                 {props.time.map((time, indice) => {
