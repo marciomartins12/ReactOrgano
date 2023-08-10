@@ -1,5 +1,5 @@
 .container {
-    background-color: rgb(82, 206, 57);
+    background-blend-mode: multiply;
     display: flex;
     justify-content: space-around;
     flex-direction: column;

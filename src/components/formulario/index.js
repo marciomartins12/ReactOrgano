@@ -8,7 +8,7 @@ const Form = (props)=>{
     const [imgPlayer, setimgPlayer] = useState("");
 
     return (
-        <div  className="formulario">
+        <div  className="formulario" style={{backgroundImage: "url(./img/fundo.png)", backgroundPosition: "center"}}>
         <form onSubmit={(evento)=>{
             evento.preventDefault()
             props.receberPlayer({nomePlayer, funcaoPlayer, imgPlayer})
