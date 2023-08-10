@@ -1,0 +1,31 @@
+.container-item {
+    width: 150px;
+    height: auto;
+    margin: 0.25em;
+    border-bottom: 1px solid rgb(255, 252, 252);
+    padding-bottom: 1em;
+    border-radius: 10%;
+}
+
+.container-item img {
+    width: 55px;
+    border-radius: 50%;
+    bottom: -15px;
+    position: relative;
+}
+
+.div-nome-paragrafo h3 {
+    position: relative;
+    margin-top: 1em;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+.div-nome-paragrafo h4{
+    margin-top: 0.45em;
+}
+
+.div-img {
+    border-radius: 1em 1em 0 0;
+    height: 50px;
+}

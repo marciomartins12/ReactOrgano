@@ -1,0 +1,22 @@
+.container {
+    background-color: rgb(82, 206, 57);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.container .h2{
+    font-weight: bold;
+    font-size: 2em;
+    display: inline-block;
+    width: 100%;
+    color: white;
+    
+}
+.container-div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
