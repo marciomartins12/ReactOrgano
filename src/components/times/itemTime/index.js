@@ -11,7 +11,7 @@ const Item = (props) => {
 
                     </div>
                     <div className="div-nome-paragrafo">
-                        <h3 style={{backgroundColor:props.corP}}>{props.nome}</h3>
+                        <h3 style={{color:props.corP}}>{props.nome}</h3>
                         <h4 style={{color:props.corP}}>{props.funcao}</h4>
                     </div>
                 </div>
