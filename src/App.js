@@ -41,7 +41,7 @@ function App() {
   }
 function mudarCor(cor, nome){
   setTimes(times.map((time)=>{
-    if(time.funcao == nome){
+    if(time.funcao === nome){
       time.cor = cor
     }
   return time}) )

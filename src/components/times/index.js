@@ -1,10 +1,11 @@
 import "./Times.css"
 import Item from "./itemTime"
+import hexToRgba from "hex-to-rgba"
 const Times = (props) => {
     return (
 (props.time.length > 0) &&
         <section className="container" style={{backgroundImage:"url(./img/fundo.png)",
-        backgroundColor:props.timeCorS}}>
+        backgroundColor:hexToRgba(props.timeCorP, "0.40")}}>
 <div className="h2">
             <h2 style={{backgroundColor:props.timeCorP, padding:10}}>{props.timeNome}</h2>
 </div>
