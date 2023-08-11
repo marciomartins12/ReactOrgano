@@ -2,6 +2,7 @@ import { useState } from "react"
 import "./Formulario.css"
 import Inputs from "./ImputsFormulario";
 import Selection from "./OptionForm";
+import { v4 as uuidv4 } from "uuid";
 const Form = (props)=>{
     const [nomePlayer, setNomePlayer] = useState("");
     const [funcaoPlayer, setFuncaoPlayer] = useState("");
@@ -11,7 +12,7 @@ const Form = (props)=>{
         <div  className="formulario" style={{backgroundImage: "url(./img/fundo.png)", backgroundPosition: "center"}}>
         <form onSubmit={(evento)=>{
             evento.preventDefault()
-            props.receberPlayer({nomePlayer, funcaoPlayer, imgPlayer})
+            props.receberPlayer({nomePlayer, funcaoPlayer, imgPlayer, id:uuidv4()})
         }}>
 
            <Inputs

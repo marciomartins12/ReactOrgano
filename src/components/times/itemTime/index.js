@@ -1,10 +1,10 @@
 import "./Item.css"
-
+import {FontAwesomeIcon} from "react-icons/fa"
 const Item = (props) => {
     return (
         
             <div className="container-item">
-
+<FontAwesomeIcon icon="fa-solid fa-x" />
                 <div className="div">
 
                     <div className="div-img" style={{backgroundColor:props.corP}}>
