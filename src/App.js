@@ -38,12 +38,16 @@ function App() {
   const receberPlayer = (elemento) => {
     setPlayer([...player, elemento])
   }
+
 function mudarCor(cor, nome){
   setTimes(times.map((time)=>{
     if(time.funcao === nome){
       time.cor = cor
     }
   return time}) )
+}
+function aoDeletar(id){
+  setPlayer(player.filter((time)=> time.id != id))
 }
 
 
@@ -61,6 +65,7 @@ function mudarCor(cor, nome){
           timeNome={time.funcao}
           mudarCor ={mudarCor}
           time={player.filter((p) => p.funcaoPlayer === time.funcao)}
+          aoDeletar={aoDeletar}
         />
       })}
     </section>

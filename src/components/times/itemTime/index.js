@@ -1,10 +1,13 @@
+import {AiFillCloseCircle} from "react-icons/ai"
 import "./Item.css"
-import {FontAwesomeIcon} from "react-icons/fa"
 const Item = (props) => {
     return (
         
             <div className="container-item">
-<FontAwesomeIcon icon="fa-solid fa-x" />
+<AiFillCloseCircle 
+ className="icone-fechar"
+ onClick={()=>{ props.aoDeletar(props.id)}}
+ />
                 <div className="div">
 
                     <div className="div-img" style={{backgroundColor:props.corP}}>

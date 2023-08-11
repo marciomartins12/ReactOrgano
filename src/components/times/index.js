@@ -8,7 +8,6 @@ const Times = (props) => {
         backgroundColor:hexToRgba(props.timeCorP, "0.40")}}>
 <div className="h2">
             <h2 style={{color: props.timeCorP,borderColor: props.timeCorP ,padding:10}}>{props.timeNome}</h2>
-            
 </div>
             <input className="inp" type="color"
             value={props.timeCorP}
@@ -24,6 +23,8 @@ const Times = (props) => {
                         nome={time.nomePlayer}
                         funcao={time.funcaoPlayer}
                         img={time.imgPlayer}
+                        id={time.id}
+                        aoDeletar={props.aoDeletar}
                     />
 
                 })}
@@ -32,5 +33,3 @@ const Times = (props) => {
     )
 }
 export default Times
-
-//aaa

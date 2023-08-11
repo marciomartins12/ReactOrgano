@@ -29,3 +29,9 @@
     border-radius: 1em 1em 0 0;
     height: 50px;
 }
+.icone-fechar{
+    position: relative;
+    left: 40%;
+    font-size: 1.2em;
+    top: 20%;
+}
