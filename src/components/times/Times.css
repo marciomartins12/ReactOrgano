@@ -11,8 +11,11 @@
     font-size: 2em;
     display: inline-block;
     width: 100%;
-    color: white;
-    
+    color: #000;
+}
+.container h2{
+    display: inline-block;
+    border-bottom: 6px solid;
 }
 .container-div {
     display: flex;

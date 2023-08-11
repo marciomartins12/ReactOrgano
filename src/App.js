@@ -37,7 +37,6 @@ function App() {
   ]
   const receberPlayer = (elemento) => {
     setPlayer([...player, elemento])
-    console.log(elemento)
   }
 function mudarCor(cor, nome){
   setTimes(times.map((time)=>{

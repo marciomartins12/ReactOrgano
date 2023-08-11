@@ -7,7 +7,7 @@ const Times = (props) => {
         <section className="container" style={{backgroundImage:"url(./img/fundo.png)",
         backgroundColor:hexToRgba(props.timeCorP, "0.40")}}>
 <div className="h2">
-            <h2 style={{backgroundColor:props.timeCorP, padding:10}}>{props.timeNome}</h2>
+            <h2 style={{color: props.timeCorP,borderColor: props.timeCorP ,padding:10}}>{props.timeNome}</h2>
             
 </div>
             <input className="inp" type="color"
@@ -17,7 +17,7 @@ const Times = (props) => {
             <div className="container-div">
 
                 {props.time.map((time, indice) => {
-                    console.log(time)
+                    
                     return <Item
                         key={indice}
                         corP={props.timeCorP}
