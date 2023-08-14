@@ -46,8 +46,8 @@ const Form = (props) => {
             </form>
             <form onSubmit={(evento) => {
                 evento.preventDefault()
-                setNomeFuncao('')
-                setCorFuncao('')
+                setNomeFuncao("")
+                setCorFuncao("")
                 props.listaSet(nomeFuncao, corFuncao)
             }}>
                 <Inputs
