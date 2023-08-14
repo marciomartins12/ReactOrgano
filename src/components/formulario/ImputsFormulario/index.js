@@ -8,7 +8,6 @@ const Inputs = (props) => {
             <input
                 type={props.tipo}
                 required={true}
-                value={props.value}
                 placeholder={props.placeholder}
                 onChange={(evento)=>props.valorAlterarF(evento.target.value)}
                 value={props.valor}
