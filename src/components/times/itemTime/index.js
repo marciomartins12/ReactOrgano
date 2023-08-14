@@ -3,7 +3,6 @@ import {AiOutlineHeart} from "react-icons/ai"
 import {AiFillHeart} from "react-icons/ai"
 import "./Item.css"
 const Item = (props) => {
-    console.log(props.favorito)
     function tamanhoefuncao(){
         props.favoritar(props.id)
     }

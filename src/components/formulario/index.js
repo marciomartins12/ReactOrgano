@@ -15,7 +15,7 @@ const Form = (props) => {
             <form onSubmit={(evento) => {
                 evento.preventDefault();
                 props.receberPlayer({ nomePlayer, funcaoPlayer, imgPlayer, id: uuidv4(), favorito: false });
-                setNomeFuncao("");
+                setNomePlayer("");
                 setFuncaoPlayer("");
                 setimgPlayer("");
             }}>
