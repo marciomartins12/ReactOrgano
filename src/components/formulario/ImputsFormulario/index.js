@@ -6,7 +6,7 @@ const Inputs = (props) => {
                 {props.nomeTitulo}
             </h2>
             <input
-                type="text"
+                type={props.tipo}
                 required={true}
                 placeholder={props.placeholder}
                 onChange={(evento)=>props.valorAlterarF(evento.target.value)}

@@ -7,6 +7,8 @@ const Form = (props)=>{
     const [nomePlayer, setNomePlayer] = useState("");
     const [funcaoPlayer, setFuncaoPlayer] = useState("");
     const [imgPlayer, setimgPlayer] = useState("");
+    const [nomeFuncao, setNomeFuncao] = useState("");
+    const [corFuncao, setCorFuncao] = useState("");
 
     return (
         <div  className="formulario" style={{backgroundImage: "url(./img/fundo.png)", backgroundPosition: "center"}}>
@@ -16,12 +18,14 @@ const Form = (props)=>{
         }}>
 
            <Inputs
+           tipo={"text"}
            nomeTitulo="Nome"
            placeholder="Digite o nome do personagem"
            valor = {nomePlayer}
            valorAlterarF = {(valor)=> setNomePlayer(valor)}
            />
            <Inputs
+           tipo={"text"}
            nomeTitulo="Imagem"
            placeholder="Digite o URL da Imagem"
            valor = {imgPlayer}
@@ -36,6 +40,25 @@ const Form = (props)=>{
            <button>
             enviar
            </button>
+        </form>
+        <form onSubmit={(evento)=>{
+            evento.preventDefault()
+            props.listaSet(nomeFuncao, corFuncao)
+        }}>
+        <Inputs
+        tipo={"text"}
+           nomeTitulo="Nome da Classe"
+           placeholder="Digite o nome da classe"
+           valor = {nomeFuncao}
+           valorAlterarF = {(valor)=> setNomeFuncao(valor)}
+           />
+           <Inputs
+           tipo={"color"}
+           nomeTitulo="Cor"
+           valor = {corFuncao}
+           valorAlterarF ={(valor)=> setCorFuncao(valor)}
+           />
+           <button>Criar novo Grupo</button>
         </form>
            </div>
 

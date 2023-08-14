@@ -29,12 +29,12 @@ function App() {
      
     },
   ])
-  const funcoes = [
+  const [funcoes, setFuncoes] = useState([
     "Iniciador",
     "Duelista",
     "Controlador",
     "Sentinela"
-  ]
+  ])
   const receberPlayer = (elemento) => {
     setPlayer([...player, elemento])
   }
@@ -49,12 +49,18 @@ function mudarCor(cor, nome){
 function aoDeletar(id){
   setPlayer(player.filter((time)=> time.id !== id))
 }
+function atualizarListadeGrupos(nome, cor){
+  setTimes([...times, {funcao: nome, cor: cor}])
+  setFuncoes([...funcoes, times.map((time)=> time.funcao)]);
+  console.log(times)
+}
 
 
   return (
     <section>
       <ImgHeader />
       <Form
+        listaSet={atualizarListadeGrupos}
         funcoes={funcoes}
         receberPlayer={(elemento) => receberPlayer(elemento)}
       />
