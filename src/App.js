@@ -51,7 +51,7 @@ function aoDeletar(id){
 }
 function atualizarListadeGrupos(nome, cor){
   setTimes([...times, {funcao: nome, cor: cor}])
-  setFuncoes([...funcoes, times.map((time)=> time.funcao)]);
+  setFuncoes([...funcoes, nome]);
   console.log(times)
 }
 
@@ -64,16 +64,16 @@ function atualizarListadeGrupos(nome, cor){
         funcoes={funcoes}
         receberPlayer={(elemento) => receberPlayer(elemento)}
       />
-      {times.map(time => {
-        return <Times
-          key={time.funcao}
-          timeCorP={time.cor}
-          timeNome={time.funcao}
-          mudarCor ={mudarCor}
-          time={player.filter((p) => p.funcaoPlayer === time.funcao)}
-          aoDeletar={aoDeletar}
-        />
-      })}
+      {times.map((time, index) => {
+  return <Times
+    key={index}
+    timeCorP={time.cor}
+    timeNome={time.funcao}
+    mudarCor={mudarCor}
+    time={player.filter((p) => p.funcaoPlayer === time.funcao)}
+    aoDeletar={aoDeletar}
+  />
+})}
     </section>
   );
 }
