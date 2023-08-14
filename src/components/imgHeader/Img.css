@@ -3,11 +3,16 @@
 }
 .header-img h1{
     position: absolute;
-    top: 40%;
-    left: 30%;
+   text-align: center;
+    width: 60%;
+    top: 50%;
+    left: 20%;
     font-size: 5em;
-    color: white;
-    background-color: rgba(62, 58, 53, 0.463);
+    color: #000;
+    padding: 0.45em;
+    border-radius: 0.45em;
+    background-color: yellow;
+    
 }
 
 .header-img img{
