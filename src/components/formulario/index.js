@@ -14,7 +14,7 @@ const Form = (props) => {
         <div className="formulario" style={{ backgroundImage: "url(./img/fundo.png)", backgroundPosition: "center" }}>
             <form onSubmit={(evento) => {
                 evento.preventDefault();
-                props.receberPlayer({ nomePlayer, funcaoPlayer, imgPlayer, id: uuidv4() });
+                props.receberPlayer({ nomePlayer, funcaoPlayer, imgPlayer, id: uuidv4(), favorito: false });
                 setNomeFuncao("");
                 setFuncaoPlayer("");
                 setimgPlayer("");

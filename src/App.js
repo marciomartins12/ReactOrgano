@@ -51,8 +51,15 @@ function App() {
     setPlayer(player.filter((time) => time.id !== id))
   }
   function atualizarListadeGrupos(nome, cor) {
-    setTimes([...times, { funcao: nome, cor: cor }])
+    setTimes([...times, { funcao: nome, cor: cor}])
     setFuncoes([...funcoes, nome]);
+  }
+  function favoritar(id){
+    setPlayer(player.map((player)=>{
+      if(id === player.id) player.favorito = !player.favorito;
+      return player
+    }))
+
   }
   return (
     <section>
@@ -65,6 +72,8 @@ function App() {
       {times.map((time, index) => {
         return <Times
           key={index}
+          favoritar={favoritar}
+          favorito={time.favorito}
           timeCorP={time.cor}
           timeNome={time.funcao}
           mudarCor={mudarCor}

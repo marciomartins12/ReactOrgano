@@ -24,6 +24,8 @@ const Times = (props) => {
                         funcao={time.funcaoPlayer}
                         img={time.imgPlayer}
                         id={time.id}
+                        favoritar={props.favoritar}
+                        favorito={time.favorito}
                         aoDeletar={props.aoDeletar}
                     />
 
