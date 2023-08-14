@@ -41,7 +41,7 @@ const Form = (props) => {
                     valorAlterarF={(valor) => setFuncaoPlayer(valor)}
                 />
                 <button>
-                    enviar
+                    Enviar
                 </button>
             </form>
             <form onSubmit={(evento) => {
