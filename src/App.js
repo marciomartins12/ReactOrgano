@@ -47,7 +47,7 @@ function mudarCor(cor, nome){
   return time}) )
 }
 function aoDeletar(id){
-  setPlayer(player.filter((time)=> time.id != id))
+  setPlayer(player.filter((time)=> time.id !== id))
 }
 
 
